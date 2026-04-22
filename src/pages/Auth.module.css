@@ -1,0 +1,392 @@
+/* ── Overlay ── */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  animation: fadeIn 0.3s ease;
+  padding: 20px;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ── Split card ── */
+.split {
+  display: flex;
+  width: 100%;
+  max-width: 1750px;
+  min-height: 1250px;
+  border-radius: 32px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: 0 8px 48px rgba(0, 0, 0, 0.12);
+}
+
+/* ── Left branding panel ── */
+.brand {
+  flex: 1;
+  background: var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 70px;
+  position: relative;
+  overflow: hidden;
+}
+.brand::before {
+  content: "";
+  position: absolute;
+  inset: -40%;
+  background:
+    radial-gradient(
+      circle at 60% 40%,
+      rgba(255, 255, 255, 0.06) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      circle at 20% 80%,
+      rgba(255, 255, 255, 0.04) 0%,
+      transparent 50%
+    );
+  pointer-events: none;
+}
+.brandInner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.brandIcon {
+  font-size: 90px;
+  color: var(--accent-fg);
+  opacity: 0.9;
+}
+.brandTitle {
+  font-family: var(--font-display);
+  font-size: 70px;
+  font-weight: 700;
+  color: var(--accent-fg);
+  letter-spacing: 1px;
+  line-height: 1;
+}
+.brandDesc {
+  font-size: 24px;
+  color: var(--accent-fg);
+  opacity: 0.75;
+  line-height: 1.6;
+  max-width: 260px;
+}
+.brandFeatures {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 12px;
+}
+.feat {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 27px;
+  color: var(--accent-fg);
+  opacity: 0.8;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.feat span {
+  font-size: 18px;
+}
+
+/* ── Right form panel ── */
+.formPanel {
+  flex: 1;
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 70px;
+  overflow-y: auto;
+}
+.formInner {
+  width: 100%;
+  max-width: 700px;
+}
+
+.formTitle {
+  font-family: var(--font-display);
+  font-size: 70px;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: -0.6px;
+  margin-bottom: 6px;
+}
+.formSub {
+  font-size: 30px;
+  color: var(--text2);
+  margin-bottom: 26px;
+  line-height: 1.6;
+}
+
+/* ── Google button ── */
+.googleBtn {
+  width: 100%;
+  padding: 20px 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 1px solid var(--border2);
+  border-radius: var(--r-sm);
+  background: var(--bg2);
+  color: var(--text);
+  font-size: 24px;
+  font-weight: 600;
+  transition: all 0.15s;
+  font-family: sans-serif;
+  cursor: pointer;
+}
+.googleBtn:hover:not(:disabled) {
+  background: var(--bg3);
+}
+.googleBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ── Divider ── */
+.divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 22px 0 18px;
+  color: var(--text3);
+  font-size: 18px;
+}
+.divider::before,
+.divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+/* ── Tabs ── */
+.tabs {
+  display: flex;
+  gap: 4px;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-radius: 15px;
+  padding: 7px;
+  margin-bottom: 22px;
+}
+.tab {
+  flex: 1;
+  padding: 13px;
+  text-align: center;
+  border-radius: 15px;
+  font-size: 25px;
+  font-weight: 600;
+  color: var(--text2);
+  font-family: sans-serif;
+  background: transparent;
+  border: none;
+  transition: all 0.15s;
+  cursor: pointer;
+}
+.tab.active {
+  background: var(--bg);
+  color: var(--text);
+}
+
+/* ── Fields ── */
+.fields {
+  display: flex;
+  flex-direction: column;
+}
+.row2 {
+  display: flex;
+  gap: 12px;
+}
+.row2 > * {
+  flex: 1;
+}
+.select {
+  width: 100%;
+  padding: 17px 18px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--bg2);
+  color: var(--text);
+  font-size: 17px;
+  outline: none;
+}
+
+.select:focus {
+  border-color: var(--border2);
+  background: var(--bg);
+}
+
+.fields input {
+  width: 100%;
+  padding: 22px 26px;
+  border: 1px solid var(--border);
+  border-radius: 15px;
+  background: var(--bg2);
+  color: var(--text);
+  font-size: 28px;
+  font-family: sans-serif;
+  outline: none;
+  transition:
+    border-color 0.15s,
+    background 0.15s;
+}
+.fields input:focus {
+  border-color: var(--border2);
+  background: var(--bg);
+}
+.fields input::placeholder {
+  color: var(--text3);
+}
+
+/* ── Submit button ── */
+.btn {
+  width: 100%;
+  padding: 28px;
+  border: none;
+  border-radius: 15px;
+  background: var(--accent);
+  color: var(--accent-fg);
+  font-size: 25px;
+  font-weight: 500;
+  font-family: sans-serif;
+  word-spacing: 6px;
+  cursor: pointer;
+  transition: opacity 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 14px;
+}
+.btn:hover:not(:disabled) {
+  opacity: 0.85;
+}
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+/* ── Spinner ── */
+.spinner {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #fff;
+  animation: spin 0.7s linear infinite;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ── Error ── */
+.err {
+  font-size: 21px;
+  color: #e24b4a;
+  margin: 8px 0;
+  padding: 13px 15px;
+  background: rgba(226, 75, 74, 0.08);
+  border-radius: var(--r-sm);
+  border: 1px solid rgba(226, 75, 74, 0.2);
+  font-family: system-ui;
+}
+
+/* ── OTP ── */
+.otpWrap {
+  text-align: center;
+}
+.otpIcon {
+  font-size: 40px;
+  margin-bottom: 14px;
+}
+.otpRow {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 26px 0;
+}
+.otpInput {
+  width: 62px;
+  height: 72px;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--bg2);
+  color: var(--text);
+  outline: none;
+}
+.otpInput:focus {
+  border-color: var(--border2);
+  background: var(--bg);
+}
+
+.resend {
+  margin-top: 16px;
+  font-size: 28px;
+  color: var(--text3);
+}
+.resend span {
+  color: var(--text2);
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* ── Mobile ── */
+@media (max-width: 680px) {
+  .split {
+    flex-direction: column;
+    max-width: 100%;
+  }
+
+  .brand {
+    padding: 32px 28px;
+    flex-direction: row;
+    gap: 16px;
+  }
+
+  .brandFeatures {
+    display: none;
+  }
+
+  .brandTitle {
+    font-size: 32px;
+  }
+
+  .formPanel {
+    padding: 32px 24px;
+  }
+
+  .formInner {
+    max-width: 100%;
+  }
+
+  .row2 {
+    flex-direction: column;
+    gap: 0;
+  }
+}
