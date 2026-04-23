@@ -59,10 +59,11 @@ export default function AuthPage() {
         setBusy(true);
         const { data } = await authApi.signupGoogle(idToken);
         const t = data.data.accessToken || data.token;
+        const email = data.data.email || data.data.user?.email || '';
         const payload = decodeToken(t);
         saveAuth(t, {
           username: payload.username,
-          email:    payload.email || '',
+          email:    email,
         });
       } catch (e) {
         if (e instanceof DOMException) return;

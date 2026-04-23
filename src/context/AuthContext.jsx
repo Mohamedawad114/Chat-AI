@@ -41,6 +41,7 @@ export function AuthProvider({ children }) {
 
     setToken(tokenVal);
     setUser({ name, email });
+      connectSocket(tokenVal);
   }, []);
 
   const logout = useCallback(() => {
