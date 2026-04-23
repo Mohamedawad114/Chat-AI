@@ -53,7 +53,7 @@ export const authApi = {
   signup: (data) => api.post("/Auth/signup", data),
   confirmEmail: (data) => api.post("/Auth/confirm-email", data),
   resendOtp: (email) => api.get("/Auth/resend-OTP", { params: { email } }),
-  signupGoogle: (idToken) => api.post("/auth/signup-Gmail", { idToken }),
+  signupGoogle: (idToken) => api.post("/Auth/signup-Gmail", { idToken }),
   refresh: () => api.get("/Auth/refresh-token"),
 };
 
