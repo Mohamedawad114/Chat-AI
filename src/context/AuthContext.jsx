@@ -9,7 +9,6 @@ export function AuthProvider({ children }) {
   const [token, setToken] = useState(() => localStorage.getItem('at'));
   const [loading, setLoading] = useState(true);
 
-  // ─── Hydrate on app start ─────────────────────────────
   useEffect(() => {
     const t = localStorage.getItem('at');
     const un = localStorage.getItem('un');
@@ -44,7 +43,6 @@ export function AuthProvider({ children }) {
     setUser({ name, email });
   }, []);
 
-  // ─── Logout ────────────────────────────────────────────
   const logout = useCallback(() => {
     localStorage.removeItem('at');
     localStorage.removeItem('un');

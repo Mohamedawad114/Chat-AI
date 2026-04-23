@@ -72,7 +72,6 @@ export default function AuthPage() {
     }, 300);
   };
 
-  // ─── Login ────────────────────────────────────────────────────────────────
   const [lEmail, setLEmail] = useState('');
   const [lPass,  setLPass]  = useState('');
 
@@ -93,8 +92,6 @@ export default function AuthPage() {
       setErr(e.response?.data?.message || 'بيانات غير صحيحة');
     } finally { setBusy(false); }
   };
-
-  // ─── Signup ───────────────────────────────────────────────────────────────
   const [sName,   setSName]   = useState('');
   const [sEmail,  setSEmail]  = useState('');
   const [sPhone,  setSPhone]  = useState('');
@@ -131,7 +128,6 @@ export default function AuthPage() {
     } finally { setBusy(false); }
   };
 
-  // ─── OTP ─────────────────────────────────────────────────────────────────
   const [otp, setOtp] = useState(['','','','','','']);
   const otpRefs = useRef([]);
 

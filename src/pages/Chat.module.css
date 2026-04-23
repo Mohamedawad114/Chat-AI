@@ -4,7 +4,6 @@
   overflow: hidden;
 }
 
-/* ── Topbar ── */
 .main {
   flex: 1;
   display: flex;
@@ -78,7 +77,6 @@
   color: var(--text);
 }
 
-/* ── Messages ── */
 .messages {
   flex: 1;
   overflow-y: auto;
@@ -87,7 +85,6 @@
   flex-direction: column;
   gap: 16px;
 }
-
 .loadOlder {
   align-self: center;
   padding: 6px 14px;
@@ -129,8 +126,6 @@
   line-height: 1.6;
   max-width: 260px;
 }
-
-/* ── Input ── */
 .inputArea {
   padding: 16px 20px;
   border-top: 1px solid var(--border);

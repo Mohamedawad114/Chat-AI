@@ -8,7 +8,6 @@ export function useChatHistory() {
   const hasMoreRef                = useRef(false);
   const convIdRef                 = useRef(null);
 
-  // يحمّل محادثة جديدة (reset) أو يحمّل رسائل أقدم
   const load = useCallback(async (conversationId, reset = false) => {
     if (loading) return;
     if (reset) {
@@ -22,7 +21,6 @@ export function useChatHistory() {
     setLoading(true);
     try {
       const { data } = await chatApi.getHistory(conversationId, cursorRef.current);
-      // الـ API بيرجع أحدث الرسائل أول → نعكسهم عشان يكونوا chronological
       const raw  = data.messages || data.data || (Array.isArray(data) ? data : []);
       const list = [...raw].reverse();
       const next = data.nextCursor || data.cursor || null;
@@ -32,7 +30,6 @@ export function useChatHistory() {
       if (reset) {
         setMessages(list);
       } else {
-        // رسائل أقدم تيجي في الأول
         setMessages(prev => [...list, ...prev]);
       }
     } catch (e) {
@@ -42,7 +39,6 @@ export function useChatHistory() {
     }
   }, [loading]);
 
-  // يضيف رسالة جديدة في الأسفل (user أو AI)
   const append = useCallback((role, content) => {
     setMessages(prev => [...prev, {
       _id:     Date.now().toString(),
@@ -51,7 +47,6 @@ export function useChatHistory() {
     }]);
   }, []);
 
-  // يحدّث آخر رسالة AI (streaming chunks)
   const updateLast = useCallback((content) => {
     setMessages(prev => {
       if (!prev.length) return prev;
@@ -61,7 +56,6 @@ export function useChatHistory() {
     });
   }, []);
 
-  // يضيف placeholder للـ streaming
   const appendStreaming = useCallback(() => {
     setMessages(prev => [...prev, {
       _id:       'streaming',

@@ -6,12 +6,12 @@ export default defineConfig({
   server: {
     port: 5173,
     proxy: {
-      '/api': {
-        target: 'http://localhost:3000',
+      "/api": {
+        target: "https://chat-bot-production-ac8f.up.railway.app/",
         changeOrigin: true,
       },
-      '/chat': {
-        target: 'http://localhost:3000',
+      "/chat": {
+        target: "https://chat-bot-production-ac8f.up.railway.app/",
         changeOrigin: true,
         ws: true,
       },

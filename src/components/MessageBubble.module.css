@@ -55,7 +55,6 @@
   border-bottom-left-radius: 3px;
 }
 
-/* typing dots */
 .typing {
   display: flex;
   gap: 4px;
@@ -85,7 +84,6 @@
   }
 }
 
-/* streaming cursor blink */
 .cursor {
   display: inline-block;
   width: 2px;

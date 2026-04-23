@@ -26,11 +26,6 @@ export default function ChatPage() {
     messages, loading: histLoading, hasMore: histMore,
     load: loadHist, append, updateLast, appendStreaming, clear: clearMessages,
   } = useChatHistory();
-  console.log("USER:", user);
-console.log("ACTIVE CONV:", activeConvId);
-console.log("CONVS:", convs);
-
-  // ─── Socket callbacks ────────────────────────────────────────────────────
   const handleChunk = useCallback((convId, chunk) => {
     streamBufRef.current += chunk;
     updateLast(streamBufRef.current);
@@ -43,7 +38,6 @@ console.log("CONVS:", convs);
   }, [updateLast]);
 
   const handleNewConv = useCallback((convId, convName) => {
-    // لو ده أول رد ← نحدّث الـ active conversation
     if (!activeConvId) setActiveConvId(convId);
     if (convName) {
       setActiveConvName(convName);
@@ -59,7 +53,6 @@ console.log("CONVS:", convs);
     onNewConv: handleNewConv,
   });
 
-  // ─── Boot ────────────────────────────────────────────────────────────────
   useEffect(() => {
     document.documentElement.setAttribute('data-theme', theme);
   }, [theme]);
@@ -72,7 +65,6 @@ console.log("CONVS:", convs);
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
   }, [messages]);
 
-  // ─── Actions ─────────────────────────────────────────────────────────────
   const openConversation = useCallback(async (id, name) => {
     setActiveConvId(id);
     setActiveConvName(name);
@@ -116,7 +108,6 @@ console.log("CONVS:", convs);
     el.style.height = Math.min(el.scrollHeight, 160) + 'px';
   };
 
-  // ─── Render ───────────────────────────────────────────────────────────────
   return (
     <>
     <div className={styles.app}>

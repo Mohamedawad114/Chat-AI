@@ -1,5 +1,7 @@
 import axios from "axios";
-export const BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:3000";
+export const BASE_URL =
+  import.meta.env.VITE_API_URL ||
+  "https://chat-bot-production-ac8f.up.railway.app";
 export const API_BASE = import.meta.env.VITE_API_BASE || "/api";
 
 const api = axios.create({
