@@ -279,7 +279,7 @@ export default function AuthPage() {
                 <h2 className={styles.formTitle}>تحقق من بريدك</h2>
                 <p className={styles.formSub}>
                   أرسلنا كود التحقق إلى<br />
-                  <strong style={{fontSize:" 30px",
+                  <strong style={{fontSize:" 13px",
     fontFamily: "monospace"}}>{pendingEmail.current}</strong>
                 </p>
                 <div className={styles.otpRow}>
