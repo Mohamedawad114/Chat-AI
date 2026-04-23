@@ -1,16 +1,58 @@
-# React + Vite
+# 🎨 Chat AI Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern real-time chat frontend built with **React (Vite)**, designed to deliver a smooth, responsive, and interactive chat experience similar to AI chat applications.
 
-Currently, two official plugins are available:
+It focuses on **real-time communication, clean UI/UX, authentication flow, and scalable frontend architecture**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🚀 Key Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 💬 Real-time Chat Experience
+- Instant messaging using Socket.IO
+- Live streaming responses from the backend
+- Typing indicators for better UX
+- Auto-scroll to latest messages
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 🔐 Authentication System
+- Login / Signup functionality
+- JWT authentication (Access + Refresh Token)
+- Automatic silent token refresh
+- Persistent login using localStorage
+
+---
+
+### 🧠 Chat Management
+- Multiple conversations support
+- Load previous chat history
+- Pagination for messages
+- Separation between user and assistant messages
+
+---
+
+### 🎨 Modern UI / UX
+- Clean and minimal chat interface
+- Responsive design for all devices
+- Sidebar for conversation navigation
+- Smooth transitions and animations
+
+---
+
+## 🌙 Dark Mode System
+
+This project includes a fully functional **Dark / Light Mode system**.
+
+### ✨ Features:
+- Toggle between Dark and Light themes
+- Global theme state using `data-theme` attribute
+- CSS variables for dynamic theming
+- Smooth transitions between themes
+- Persistent UI experience across sessions
+
+### 🧠 How it works:
+- Theme is stored in React state
+- Applied globally using:
+```js
+document.documentElement.setAttribute("data-theme", theme);
