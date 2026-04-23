@@ -14,7 +14,7 @@ export default function MessageBubble({ role, content, streaming }) {
             <span /><span /><span />
           </span>
         ) : (
-          <span style={{ whiteSpace: 'pre-wrap'  ,fontSize: "38px",
+          <span style={{ whiteSpace: 'pre-wrap'  ,fontSize: "18px",
     wordSpacing: "12px",
     fontFamily: "inherit" }}>{content}</span>
         )}
