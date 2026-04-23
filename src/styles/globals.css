@@ -30,7 +30,10 @@
   --r: 10px;
   --r-sm: 7px;
   --r-lg: 14px;
-  --sidebar-w: 400px;
+
+  /* ✅ Responsive sidebar */
+  --sidebar-w: min(400px, 35vw);
+
   --font-display: "Syne", system-ui, sans-serif;
   --font-body: "DM Sans", system-ui, sans-serif;
 }
@@ -60,23 +63,31 @@ body,
   height: 100%;
 }
 
+html {
+  font-size: 14px;
+}
+
 body {
   font-family: var(--font-body);
   background: var(--bg);
   color: var(--text);
-  font-size: 14px;
-  line-height: 1.6;
+
+  font-size: 13px;
+  line-height: 1.5;
+
   -webkit-font-smoothing: antialiased;
-  transition:
-    background 0.2s,
-    color 0.2s;
-  overflow: hidden;
+
+  transition: background 0.2s, color 0.2s;
+
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 button {
   font-family: var(--font-body);
   cursor: pointer;
 }
+
 input,
 textarea {
   font-family: var(--font-body);
@@ -85,10 +96,22 @@ textarea {
 ::-webkit-scrollbar {
   width: 4px;
 }
+
 ::-webkit-scrollbar-track {
   background: transparent;
 }
+
 ::-webkit-scrollbar-thumb {
   background: var(--border2);
   border-radius: 4px;
+}
+
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+* {
+  max-width: 100%;
 }
