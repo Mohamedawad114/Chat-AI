@@ -23,9 +23,9 @@
 .split {
   display: flex;
   width: 100%;
-  max-width: 1750px;
-  min-height: 1250px;
-  border-radius: 32px;
+  max-width: 900px;
+  min-height: 580px;
+  border-radius: 20px;
   overflow: hidden;
   border: 1px solid var(--border);
   box-shadow: 0 8px 48px rgba(0, 0, 0, 0.12);
@@ -37,7 +37,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 80px 70px;
+  padding: 48px 40px;
   position: relative;
   overflow: hidden;
 }
@@ -66,42 +66,44 @@
   gap: 16px;
 }
 .brandIcon {
-  font-size: 90px;
+  font-size: 42px;
+  line-height: 1;
   color: var(--accent-fg);
   opacity: 0.9;
 }
 .brandTitle {
   font-family: var(--font-display);
-  font-size: 70px;
+  font-size: 40px;
   font-weight: 700;
   color: var(--accent-fg);
   letter-spacing: 1px;
   line-height: 1;
 }
 .brandDesc {
-  font-size: 24px;
+  font-size: 15px;
   color: var(--accent-fg);
   opacity: 0.75;
   line-height: 1.6;
-  max-width: 260px;
+  max-width: 240px;
 }
 .brandFeatures {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  margin-top: 12px;
+  margin-top: 8px;
 }
 .feat {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 27px;
+  font-size: 13px;
   color: var(--accent-fg);
   opacity: 0.8;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: "Gill Sans", sans-serif;
 }
 .feat span {
-  font-size: 18px;
+  font-size: 13px;
+  opacity: 1;
 }
 
 .formPanel {
@@ -110,7 +112,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 80px 70px;
+  padding: 48px 44px;
   overflow-y: auto;
 }
 .formInner {
@@ -120,14 +122,14 @@
 
 .formTitle {
   font-family: var(--font-display);
-  font-size: 70px;
+  font-size: 24px;
   font-weight: 700;
   color: var(--text);
   letter-spacing: -0.6px;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 .formSub {
-  font-size: 30px;
+  font-size: 13px;
   color: var(--text2);
   margin-bottom: 26px;
   line-height: 1.6;
@@ -135,7 +137,7 @@
 
 .googleBtn {
   width: 100%;
-  padding: 20px 26px;
+  padding: 11px 16px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -144,14 +146,15 @@
   border-radius: var(--r-sm);
   background: var(--bg2);
   color: var(--text);
-  font-size: 24px;
+  font-size: 14px;
   font-weight: 600;
   transition: all 0.15s;
-  font-family: sans-serif;
   cursor: pointer;
+  font-family: sans-serif;
 }
 .googleBtn:hover:not(:disabled) {
   background: var(--bg3);
+  border-color: var(--border2);
 }
 .googleBtn:disabled {
   opacity: 0.5;
@@ -162,9 +165,9 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  margin: 22px 0 18px;
+  margin: 20px 0 16px;
   color: var(--text3);
-  font-size: 18px;
+  font-size: 12px;
 }
 .divider::before,
 .divider::after {
@@ -179,19 +182,18 @@
   gap: 4px;
   background: var(--bg2);
   border: 1px solid var(--border);
-  border-radius: 15px;
-  padding: 7px;
-  margin-bottom: 22px;
+  border-radius: 7px;
+  padding: 3px;
+  margin-bottom: 20px;
 }
 .tab {
   flex: 1;
-  padding: 13px;
+  padding: 8px;
   text-align: center;
-  border-radius: 15px;
-  font-size: 25px;
+  border-radius: 7px;
+  font-size: 13px;
   font-weight: 600;
   color: var(--text2);
-  font-family: sans-serif;
   background: transparent;
   border: none;
   transition: all 0.15s;
@@ -215,12 +217,12 @@
 }
 .select {
   width: 100%;
-  padding: 17px 18px;
+  padding: 10px 13px;
   border: 1px solid var(--border);
   border-radius: 12px;
   background: var(--bg2);
   color: var(--text);
-  font-size: 17px;
+  font-size: 14px;
   outline: none;
 }
 
@@ -231,12 +233,12 @@
 
 .fields input {
   width: 100%;
-  padding: 22px 26px;
+  padding: 10px 13px;
   border: 1px solid var(--border);
   border-radius: 15px;
   background: var(--bg2);
   color: var(--text);
-  font-size: 28px;
+  font-size: 14px;
   font-family: sans-serif;
   outline: none;
   transition:
@@ -253,22 +255,22 @@
 
 .btn {
   width: 100%;
-  padding: 28px;
+  padding: 11px;
   border: none;
   border-radius: 15px;
   background: var(--accent);
   color: var(--accent-fg);
-  font-size: 25px;
+  font-size:14px;
   font-weight: 500;
-  font-family: sans-serif;
-  word-spacing: 6px;
   cursor: pointer;
+  font-family: sans-serif;
   transition: opacity 0.15s;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  margin-top: 14px;
+  margin-top: 6px;
+  word-spacing: 6px;
 }
 .btn:hover:not(:disabled) {
   opacity: 0.85;
@@ -279,8 +281,8 @@
 }
 
 .spinner {
-  width: 16px;
-  height: 16px;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
   border: 2px solid rgba(255, 255, 255, 0.3);
   border-top-color: #fff;
@@ -292,42 +294,43 @@
   }
 }
 
-/* ── Error ── */
 .err {
-  font-size: 21px;
+  font-size: 12px;
   color: #e24b4a;
   margin: 8px 0;
-  padding: 13px 15px;
+  padding: 8px 12px;
   background: rgba(226, 75, 74, 0.08);
   border-radius: var(--r-sm);
   border: 1px solid rgba(226, 75, 74, 0.2);
-  font-family: system-ui;
 }
 
 .otpWrap {
   text-align: center;
 }
 .otpIcon {
-  font-size: 40px;
-  margin-bottom: 14px;
+  font-size: 36px;
+  margin-bottom: 12px;
 }
 .otpRow {
   display: flex;
   gap: 10px;
   justify-content: center;
-  margin: 26px 0;
+  margin: 24px 0;
 }
 .otpInput {
-  width: 62px;
-  height: 72px;
+  width: 46px;
+  height: 54px;
   text-align: center;
-  font-size: 28px;
+  font-size: 22px;
   font-weight: 600;
   border: 1px solid var(--border);
   border-radius: 10px;
   background: var(--bg2);
   color: var(--text);
   outline: none;
+  transition:
+    border-color 0.15s,
+    background 0.15s;
 }
 .otpInput:focus {
   border-color: var(--border2);
@@ -335,8 +338,8 @@
 }
 
 .resend {
-  margin-top: 16px;
-  font-size: 28px;
+  margin-top: 14px;
+  font-size: 12px;
   color: var(--text3);
 }
 .resend span {
@@ -348,31 +351,24 @@
 @media (max-width: 680px) {
   .split {
     flex-direction: column;
+    min-height: unset;
     max-width: 100%;
   }
-
   .brand {
     padding: 32px 28px;
     flex-direction: row;
     gap: 16px;
+    min-height: unset;
   }
-
   .brandFeatures {
     display: none;
   }
-
   .brandTitle {
-    font-size: 32px;
+    font-size: 28px;
   }
-
   .formPanel {
     padding: 32px 24px;
   }
-
-  .formInner {
-    max-width: 100%;
-  }
-
   .row2 {
     flex-direction: column;
     gap: 0;

@@ -17,7 +17,6 @@
 .row.user {
   flex-direction: row-reverse;
 }
-
 .avatar {
   width: 28px;
   height: 28px;
@@ -33,7 +32,6 @@
   color: var(--text2);
   border: 1px solid var(--border);
 }
-
 .bubble {
   max-width: 72%;
   padding: 11px 15px;
@@ -44,9 +42,8 @@
 }
 .userBubble {
   background: var(--user-bg);
-  color: var(--user-fg);;
+  color: var(--user-fg);
   border-bottom-right-radius: 3px;
-  font-family: inherit;
 }
 .aiBubble {
   background: var(--ai-bg);
@@ -54,7 +51,6 @@
   border: 1px solid var(--ai-border);
   border-bottom-left-radius: 3px;
 }
-
 .typing {
   display: flex;
   gap: 4px;
@@ -73,6 +69,7 @@
 .typing span:nth-child(3) {
   animation-delay: 0.3s;
 }
+
 @keyframes bounce {
   0%,
   60%,
@@ -94,6 +91,7 @@
   vertical-align: text-bottom;
   animation: blink 1s step-end infinite;
 }
+
 @keyframes blink {
   0%,
   100% {

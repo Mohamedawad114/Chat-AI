@@ -12,14 +12,15 @@
 }
 
 .topbar {
-  height: 91px;
-  padding: 36px 22px;
+  height: 52px;
+  padding: 0 20px;
   border-bottom: 1px solid var(--border);
   display: flex;
   align-items: center;
   gap: 10px;
   flex-shrink: 0;
 }
+
 .menuBtn {
   display: none;
   background: transparent;
@@ -28,13 +29,15 @@
   font-size: 18px;
   padding: 4px;
 }
+
 .convTitle {
   flex: 1;
-  font-size: 36px;
+  font-size: 14px;
   font-weight: 500;
   color: var(--text);
   opacity: 0.5;
 }
+
 .topActions {
   display: flex;
   align-items: center;
@@ -48,6 +51,7 @@
   font-size: 12px;
   color: var(--text3);
 }
+
 .sDot {
   width: 6px;
   height: 6px;
@@ -55,13 +59,14 @@
   background: var(--border2);
   transition: background 0.3s;
 }
+
 .sDot.on {
   background: #22c55e;
 }
 
 .iconBtn {
-  width: 50px;
-  height: 50px;
+  width: 32px;
+  height: 32px;
   border-radius: var(--r-sm);
   border: 1px solid var(--border);
   background: transparent;
@@ -69,9 +74,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 20px;
+  font-size: 14px;
   transition: all 0.15s;
 }
+
 .iconBtn:hover {
   background: var(--bg2);
   color: var(--text);
@@ -85,6 +91,7 @@
   flex-direction: column;
   gap: 16px;
 }
+
 .loadOlder {
   align-self: center;
   padding: 6px 14px;
@@ -95,6 +102,7 @@
   color: var(--text3);
   transition: all 0.15s;
 }
+
 .loadOlder:hover:not(:disabled) {
   background: var(--bg2);
   color: var(--text2);
@@ -111,26 +119,31 @@
   padding: 60px 40px;
   color: var(--text3);
 }
+
 .emptyIcon {
-  font-size: 300px;
+  font-size: 36px;
   opacity: 0.3;
 }
+
 .emptyTitle {
-  font-size: 80px;
+  font-size: 16px;
   font-family: revert-layer;
   font-weight: 500;
   color: var(--text2);
 }
+
 .emptySub {
-  font-size: 30px;
+  font-size: 13px;
   line-height: 1.6;
   max-width: 260px;
 }
+
 .inputArea {
   padding: 16px 20px;
   border-top: 1px solid var(--border);
   flex-shrink: 0;
 }
+
 .inputWrap {
   display: flex;
   gap: 8px;
@@ -138,10 +151,10 @@
   background: var(--bg2);
   border: 1px solid var(--border2);
   border-radius: var(--r);
-  padding: 26px 26px;
+  padding: 10px 14px;
   transition: border-color 0.15s;
-    margin-bottom: 22px;
 }
+
 .inputWrap:focus-within {
   border-color: var(--border2);
 }
@@ -151,22 +164,24 @@
   background: transparent;
   border: none;
   outline: none;
-  font-size: 32px;
+  font-size: 14px;
   color: var(--text);
   resize: none;
   max-height: 160px;
   line-height: 1.6;
 }
+
 .input::placeholder {
   color: var(--text3);
 }
+
 .input:disabled {
   opacity: 0.6;
 }
 
 .sendBtn {
-  width: 38px;
-  height: 46px;
+  width: 32px;
+  height: 32px;
   border-radius: var(--r-sm);
   border: none;
   background: var(--accent);
@@ -174,15 +189,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 22px;
+  font-size: 15px;
   flex-shrink: 0;
   transition: opacity 0.15s;
-
 }
+
 .sendBtn:disabled {
   opacity: 0.35;
   cursor: not-allowed;
 }
+
 .sendBtn:not(:disabled):hover {
   opacity: 0.85;
 }
