@@ -17,6 +17,7 @@ export function AuthProvider({ children }) {
     if (t && un) {
       setToken(t);
       setUser({ name: un, email: ue || '' });
+      connectSocket(t);
     }
 
     setLoading(false);
